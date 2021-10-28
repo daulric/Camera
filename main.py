@@ -3,6 +3,7 @@ from kivy.uix.camera import Camera
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.button import Button
 from kivy.core.window import Window
+from keep_alive import keep_alive
 # set window size
 Window.size = (500, 550)
 class cameraApp(App):
@@ -30,5 +31,6 @@ class cameraApp(App):
         print('Image captured and saved in current working directory')
         
 if __name__ == '__main__':
+    keep_alive()
     # run app
     cameraApp().run()
